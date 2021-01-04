@@ -1,0 +1,115 @@
+// 页面中只有表格
+.table-content-wrapper {
+  // background: #fff;
+  // margin-bottom: 24px;
+  .content-header {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    // border-bottom: 1px solid #f5f5f5;
+    strong {
+      font-weight: normal;
+      color: #333;
+      font-size: 22px;
+      span {
+        font-size: 12px;
+        color: #999;
+        margin-left: 10px;
+      }
+    }
+  }
+  .content-container {
+    background: #fff;
+    margin-top: 24px;
+    padding: 24px;
+    .btn-operation {
+      padding-bottom: 15px;
+    }
+  }
+  .content-operation {
+    background: #fff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    .condition-item {
+      display: flex;
+      align-items: center;
+      // max-width: 400px;
+      margin-bottom: 10px;
+      margin-right: 8px;
+
+      span {
+        white-space: nowrap;
+      }
+    }
+    .content-operation-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  // 分页
+  .page-pagina {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 200px;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+// 左边侧边栏右边表格
+.sidebar-table-container {
+  .page-title {
+    height: 58px;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: #666;
+  }
+  .table-content-wrapper {
+    margin-left: 201px;
+    background: #fff;
+    height: calc(100vh - 118px);
+    overflow: hidden auto;
+    .content-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid #f5f5f5;
+    }
+  }
+}
+
+// 一级列表样式
+.sidebar-list-content {
+  width: 200px;
+  background: #fff;
+  padding: 10px 0;
+  overflow-y: auto;
+  &.fixed {
+    position: fixed;
+    top: 118px;
+    bottom: 0;
+  }
+  li {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    font-family: 'PingFangSC-Regular', 'PingFang SC', sans-serif;
+    font-size: 14px;
+    border-left: 4px solid transparent;
+    padding: 12px 0px 12px 25px;
+    cursor: pointer;
+    &:hover,
+    &.selected {
+      color: #1890ff;
+    }
+    &.selected {
+      background: #e6f7ff;
+      border-color: rgba(24, 144, 255, 1);
+    }
+  }
+}

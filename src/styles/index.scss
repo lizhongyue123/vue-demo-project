@@ -1,0 +1,122 @@
+@import './mixin.scss';
+@import './sidebar.scss';
+@import './table.scss';
+@import './elementUI.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: #f0f2f5;
+  min-width: 1024px; // 页面最小宽度
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+// 项目中左右布局样式(左侧是侧边栏,右侧是内容)
+.sidebar-content-layout {
+  min-height: 100%;
+  display: flex;
+  .title {
+    padding: 10px 0;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .main-container-sidebar {
+    position: fixed;
+    top: 60px;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #fff;
+    .sidebar-wrapper {
+      width: 280px;
+      .header-operate {
+        justify-content: space-between;
+        span {
+          font-size: 18px;
+        }
+      }
+      .tree-list {
+        margin-top: 10px;
+        h4 {
+          margin-bottom: 10px;
+          font-size: 15px;
+        }
+        .scrollbar-wrapper {
+          height: calc(100vh - 216px);
+          overflow-y: auto;
+          // &:hover {
+          // }
+        }
+      }
+    }
+  }
+
+  .main-container-content {
+    margin-left: 330px;
+    background-color: #fff;
+    padding: 0 24px;
+    flex: 1;
+    overflow-x: hidden;
+    // height: 100vh;
+    .header-list {
+      .icon-item {
+        font-size: 30px;
+      }
+      .text {
+        font-size: 18px;
+        margin-left: 7px;
+      }
+    }
+    .right-content-list {
+      overflow: hidden auto;
+    }
+  }
+}
